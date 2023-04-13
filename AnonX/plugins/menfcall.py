@@ -3,7 +3,7 @@ from AnonX import app
 import asyncio
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from AnonX.core.call import AnonX
+from AnonX.core.call import Anon
 from AnonX.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
 
