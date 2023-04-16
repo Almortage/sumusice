@@ -34,7 +34,7 @@ def gpt(text) -> str:
         return None
 
 def reply_gpt(client, message):
-    text = message.text.split("/gpt ")[1]
+    text = message.text.split("/almortagel")[1]
     reply_text = gpt(text)
     chat_id = message.chat.id
     if message.reply_to_message is not None:
@@ -43,7 +43,7 @@ def reply_gpt(client, message):
         message_id = None
     client.send_message(chat_id=chat_id, text=reply_text + "\n\n\n تم استخدام أحدث إصدار من الذكاء الاصطناعي 3.5 turbo\n  شكرا للمطور المرتجل @ALMORTAGEL_12", reply_to_message_id=message_id)
 
-@app.on_message(filters.command("gpt"))
+@app.on_message(filters.command("almortagel"))
 def reply(client, message):
     message.reply_text("تم استلام سؤالك، يرجى الانتظار حتى يتم الرد عليك...")
     reply_gpt(client, message)
